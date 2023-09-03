@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b {
+    font-size: 70px;
+    color: #7f00ff;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    font-size: 35px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li a:hover,
+.links a:hover {
+    color: #04e824;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.links a {
+    font-size: 30px;
+    color: #800080;
+    margin: 25px 10px;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 2px solid black;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #000000 50%, #0f9b0f, white);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #343a40, #6c757d 50%, #adb5bd);
+    animation: object2 6s linear infinite;
+}
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 41%;
+    }
+}
+
+@keyframes object2 {
+    50% {
+        left: 35%;
+        top: 10%;
+    }
+}
+
+.cols {
+    width: 50%;
+}
+
+.cols0 {
+    width: 60%;
+    z-index: 5;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 55px;
+    letter-spacing: 5px;
+    color: #E60026;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.topline::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff;
+}
+
+h1 {
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: #3d535f;
+}
+
+.multiText {
+    color: #7CFC00;
+    text-transform: capitalize;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 4px 15px black;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #E60026;
+}
+
+.btns {
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button {
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #7f00ff;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imgbox img {
+    position: relative;
+    height: 100%;
+    height: calc(150% - 80px);
+    top: -100px;
+    left: 80px;
+    filter: drop-shadow(2px 5px 5px #80ed99);
+    /* transform: rotateX(180deg); */
+    animation: animateUser 4s linear infinite;
+}
+
+@keyframes animateUser {
+    50% {
+        right: 30px;
+        top: -90px;
+    }
+}
+
+.imgbox #splash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-40deg);
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    50% {
+        top: 49%;
+        left: 51%;
+    }
+}
